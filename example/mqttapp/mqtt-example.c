@@ -150,6 +150,12 @@ static void mqtt_sub_callback(char *topic, int topic_len, void *payload, int pay
     {
         receive_buf[i] = ((unsigned char *)payload)[i];
     }
+    printf("receive message : ");
+    for(int i=0;i<9;i++)
+    {
+        printf("%x",receive_buf[i]);
+    }
+    printf("\n");
     int rec_temp = ((int)receive_buf[5])*10+(int)receive_buf[6];
     int rec_fre = ((int)receive_buf[7])*10+(int)receive_buf[8];
     printf("rec_temp %d\n",rec_temp);
@@ -201,7 +207,7 @@ static void mqtt_work(void *parms)
             p_buf[8]=frequency_l;
             rc = mqtt_publish(RAW_TOPIC_PROP_UP, IOTX_MQTT_QOS1, p_buf, 9);
             if (rc < 0) LOG("error occur when publish");
-            LOG("message : ");
+            printf("send message : ");
             for(int i=0;i<9;i++)
             {
                 printf("%x",p_buf[i]);
