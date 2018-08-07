@@ -12,49 +12,11 @@
 #define FIRMWARE_VERSION_MAXLEN     (32)
 
 
-#ifdef ON_DAILY
-#define PRODUCT_KEY             "a1DPfXuJJsR"
-#define PRODUCT_SECRET          "M4yY1ggbRnWYXzU3"
-#define DEVICE_NAME             "test_3060_01"
-#define DEVICE_SECRET           "6BhvTPQqCEj48gIHChFQKCWgDjNnQX5f"
-#elif ON_PRE 
-#define PRODUCT_KEY             "a1DQA90NlFe"
-#define PRODUCT_SECRET          "0VDRjoQAbieMcYyZ"
-#define DEVICE_NAME             "jaVam0S5dTq8XKUoI2NW"
-#define DEVICE_SECRET           "IpGIaDsdUEpSvcOz237woypTlcxAV5RC"
-#elif ON_PRE2
-#define PRODUCT_KEY             "a1AzoSi5TMc"
-#define PRODUCT_SECRET          "Z9Ze6qgMrWgTOezW"
-#define DEVICE_NAME             "light_mxchip_00"
-#define DEVICE_SECRET           "T5DaOiKdR69BTOdEZduviliIsLQeM8Nn"
-#else
-#ifdef TEST_01
-#define PRODUCT_KEY             "a1AzoSi5TMc"
-#define PRODUCT_SECRET          "Z9Ze6qgMrWgTOezW"
-#define DEVICE_NAME             "test_light_01"
-#define DEVICE_SECRET           "fxJ0cs1KUB4eM128GGeopbGl6LiacPJB"
-#elif TEST_02
-#define PRODUCT_KEY             "a1AzoSi5TMc"
-#define PRODUCT_SECRET          "Z9Ze6qgMrWgTOezW"
-#define DEVICE_NAME             "test_light_02"
-#define DEVICE_SECRET           "rOip6mfWD3sxO6pO9maUBTEJ1AjmK8xe"
-#elif ESP8266
-#define PRODUCT_KEY             "a1AzoSi5TMc"
-#define PRODUCT_SECRET          "Z9Ze6qgMrWgTOezW"
-#define DEVICE_NAME             "ESP8266_cxf01"
-#define DEVICE_SECRET           "K2pM9rSaQecgx8Vo31yjM6vmsXuQA8r9"
-#elif  MQTT_TEST
-#define PRODUCT_KEY             "yfTuLfBJTiL"
-#define DEVICE_NAME             "TestDeviceForDemo"
-#define DEVICE_SECRET           "fSCl9Ns5YPnYN8Ocg0VEel1kXFnRlV6c"
+#define PRODUCT_KEY             "a1mX4c2pIVD"
 #define PRODUCT_SECRET          ""
-#else
-#define PRODUCT_KEY             "a1AzoSi5TMc"
-#define PRODUCT_SECRET          "Z9Ze6qgMrWgTOezW"
-#define DEVICE_NAME             "test_light_03"
-#define DEVICE_SECRET           "oIdAOeech8fM7aHtq0QSvV1oSle30SxP"
-#endif
-#endif
+#define DEVICE_NAME             "test"
+#define DEVICE_SECRET           "fjcRDoOxi3am8DdMwA75BkL2A8bX1BUm"
+
 
 /**
  * @brief   获取设备的`Partner ID`, 仅用于紧密合作伙伴
